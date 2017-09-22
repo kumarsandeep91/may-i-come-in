@@ -1,7 +1,11 @@
-FROM python:3
-ENV PYTHONBUFFERED 1
+FROM python:3.5
+
+MAINTAINER Sandeep Sihari "kumarsandeep91@gmail.com"
+
+ENV PYTHONUNBUFFERED 1
+
+RUN mkdir /config
+ADD /config/requirements.pip /config/
+RUN pip install -r /config/requirements.pip
 RUN mkdir /src
 WORKDIR /src
-ADD requirements.txt /src
-RUN pip install -r requirements.txt
-ADD . /src
