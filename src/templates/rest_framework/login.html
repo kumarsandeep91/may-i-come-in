@@ -1,17 +1,17 @@
-{% extends "rest_framework/base.html" %}
+{% extends "rest_framework/login_base.html" %}
 {% load static %}
 {% load i18n %}
-
-{% block title %}
-    API: May I Come In
-{% endblock %}
 
 {% block bootstrap_theme %}
     <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}" type="text/css">
 {% endblock %}
 
+{% block title %}
+    API: May I Come In
+{% endblock %}
+
 {% block branding %}
-    <a class="navbar-brand" rel="nofollow" href="#">
+    <h3 style="margin: 0 0 20px;">
         {% trans 'may-i-come-in' %}
-    </a>
+    </h3>
 {% endblock %}
